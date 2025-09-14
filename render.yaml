@@ -1,0 +1,13 @@
+# render.yaml
+services:
+  - type: web
+    name: doge-bot
+    env: docker
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /healthz
+    envVars:
+      - key: BINGX_API_KEY
+        sync: false
+      - key: BINGX_API_SECRET
+        sync: false
